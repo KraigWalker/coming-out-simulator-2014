@@ -1,5 +1,5 @@
-**Coming Out Simulator 2014**    
-a half-true game about half-truths.
+#Coming Out Simulator 2014  
+*a half-true game about half-truths.*
 
 **Play it [on Itch.io](http://ncase.itch.io/coming-out-simulator-2014)!**
 
@@ -24,6 +24,20 @@ being forced to come out to one's parents, isn't it?
 
 You are welcome to share and remix this game's code/art however you please,
 even for money-making purposes. Attribution is always appreciated, but not mandatory.
+
+---
+
+##Installation Instructions
+
+In order to build the game from source, you will require [Node.js](http://nodejs.org/) with npm.
+
+First install the dependencies
+    
+    npm install
+
+Then use Grunt to compile the game into a newly created `dist` directory
+    
+    grunt build
 
 ---
 
