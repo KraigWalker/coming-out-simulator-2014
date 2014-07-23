@@ -46,7 +46,7 @@ subscribe('choose', function(choices) {
     var labels = Object.keys(choices);
 
     // Create choices
-    for (var i=0;i<labels.length;i++) {
+    for (var i = 0;i < labels.length;i++) {
 
         var label = labels[i];
         var button = document.createElement('div');
@@ -67,7 +67,7 @@ subscribe('choose', function(choices) {
 
     // Choice padding, for 1-3 choices
     var height = (labels.length*30);
-    var padding = (120-height)/2;
+    var padding = (120 - height)/2;
     choicesDOM.style.height = height+'px';
     choicesDOM.style.padding = padding+'px 0';
 
@@ -142,15 +142,15 @@ subscribe('show', function(label, artLabel, position) {
 
         (function(dom,item,image) {
 
-            var ticksPerFrame = Math.ceil(60/image.fps);
+            var ticksPerFrame = Math.ceil(60 / image.fps);
             var ticks = 0;
             item.handle = subscribe('tick',function() {
-                ticks = (ticks+1) % ticksPerFrame;
+                ticks = (ticks + 1) % ticksPerFrame;
                 if (ticks === 0){
                     item.frame = (item.frame + 1) % image.frames;
-                    var bgX = -item.frame*image.width;
+                    var bgX = -item.frame * image.width;
                     var bgY = 0;
-                    dom.style.backgroundPosition = bgX +'px '+ bgY +'px';
+                    dom.style.backgroundPosition = bgX + 'px '+ bgY + 'px';
                 }
             });
 
