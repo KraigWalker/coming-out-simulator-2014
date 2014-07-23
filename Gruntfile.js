@@ -14,12 +14,12 @@ module.exports = function(grunt) {
         src: 'src/index.html', dest: 'dist/index.html'
       },
       sounds: {
-        src: 'src/sounds/**', dest: 'dist/sounds/'
+        expand: true, cwd: 'src/sounds/', src: '**', dest: 'dist/sounds/'
       },
       images: {
-        src: 'src/img/**', dest: 'dist/img/'
+        expand: true, cwd: 'src/img/', src: '**', dest: 'dist/img/'
       }
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
