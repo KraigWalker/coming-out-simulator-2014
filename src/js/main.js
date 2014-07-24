@@ -1,8 +1,8 @@
 window.onload = function(){
 
-    var loading_bar = document.getElementById('loading_bar');
+    var loadingBar = document.getElementById('loading_bar');
     subscribe('resourceLoaded',function(){
-        loading_bar.style.width = Math.floor((_resourcesLoaded/_resourcePromises.length)*100)+"%";
+        loadingBar.style.width = Math.floor((_resourcesLoaded/_resourcePromises.length)*100)+'%';
     });
 
     Q.all(_resourcePromises).then(function(){

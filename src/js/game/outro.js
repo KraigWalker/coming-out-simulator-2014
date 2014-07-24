@@ -126,9 +126,9 @@ function closureStory() {
     $.coming_out_stories_left -= 1;
 
     var options = [];
-    if (!$.told_story_lie) options['The Lie.']=Tell_Me_A_Lie;
-    if (!$.told_story_truth) options['The Truth.']=Tell_Me_A_Truth;
-    if (!$.told_story_half_truth) options['The Half-Truth.']=Tell_Me_A_Half_Truth;
+    if (!$.told_story_lie) options['The Lie.']= tellMeALie;
+    if (!$.told_story_truth) options['The Truth.'] = tellMeATruth;
+    if (!$.told_story_half_truth) options['The Half-Truth.'] = tellMeAHalfTruth;
     choose(options);
 }
 
@@ -196,9 +196,8 @@ function tellMeALie2() {
 
     N('They took me in as their foster child, and I was their full-time boytoy.');
 
-    if ($.outro_convo_lie==1) {
+    if ($.outro_convo_lie==1)
         p('...Thanks again to your, uh, flexibility.');
-    }
 
     switch ($.top_or_bottom) {
         case 'top': N('As we know, I like having my partners be \'the woman\' of a relationship.'); break;
@@ -222,7 +221,7 @@ function tellMeALie2() {
 
 }
 
-function Tell_Me_A_Truth(message) {
+function tellMeATruth(message) {
 
     $.told_story_truth = true;
     $.order_of_stories.push('truth');
@@ -295,7 +294,7 @@ function tellMeATruth2() {
 
 }
 
-function Tell_Me_A_Half_Truth(message) {
+function tellMeAHalfTruth(message) {
     $.told_story_half_truth = true;
     $.order_of_stories.push('half-truth');
 

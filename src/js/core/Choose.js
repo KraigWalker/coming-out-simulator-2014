@@ -12,7 +12,7 @@ var queueArray = [];
 var timer = 0;
 var ticker = 0;
 
-function step(timestamp) {
+function step() {
 
     // Tick!
     publish('tick', []);
